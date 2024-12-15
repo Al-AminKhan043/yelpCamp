@@ -1,0 +1,76 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Campground</title>
+</head>
+<body> -->
+
+    <% layout('layout/Boilerplate')%>
+    <div class="row">
+   <h1 class="text-center">New Campground </h1>
+   <div class="col-md-6 offset-md-3">
+
+    <form method="POST" action="/campgrounds" novalidate class="validated-form" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label class="form-label" for="title">Enter Title</label>
+            <input class="form-control" type="text" name="campground[title]" id="title" placeholder="Title Here" required>
+            <div class="valid-feedback">Looks great! </div>
+               <div class="invalid-feedback">Please enter title </div>
+        </div>
+           
+        <div class="mb-3">
+            <label class="form-label" for="location">Enter Location</label>
+            <input class="form-control" type="text" name="campground[location]" id="location" placeholder="Location Here" required>
+            <div class="valid-feedback">Looks great! </div>
+               <div class="invalid-feedback">Please enter location </div>
+        </div>
+       
+
+
+            <div class="mb-3">
+                <label for="image" class="form-label">Upload Images</label>
+                <input class="form-control" type="file" id="image" name="image" id="" multiple>
+              </div>
+
+
+            <!-- <label class="form-label" for="image">Enter Image URL</label>
+            <input class="form-control" type="text" name="campground[image]" id="image" placeholder="URL Here" required>
+            <div class="valid-feedback">Looks great! </div>
+               <div class="invalid-feedback">Please enter URL </div> -->
+             
+       
+        <div class="mb-3">
+            <label class="form-label" for="price">Campground Price</label>
+            
+        <div class="input-group ">
+            <span class="input-group-text" id="price-label">$</span>
+            <input id="price" type="text" class="form-control" placeholder="0.00" aria-label="price" aria-describedby="price-label" name="campground[price]" required>
+            <div class="valid-feedback">Looks great! </div>
+               <div class="invalid-feedback">Please enter price </div>
+          </div>
+          
+        </div>
+       
+        <div class="mb-3">
+            <label class="form-label" for="description">Enter Description</label>
+            <textarea class="form-control" name="campground[description]" id="description" placeholder="Description Here" required></textarea>
+            <div class="valid-feedback">Looks great! </div>
+               <div class="invalid-feedback">Please enter description </div>
+        </div>
+        
+        <div class="mb-3">
+        <button class="btn btn-success">Add Campground</button>
+    </div>
+        </form>
+        <a href="/campgrounds">Back to all</a>
+   </div>
+
+    </div>
+   
+  
+     
+<!-- </body>
+</html> -->
+
