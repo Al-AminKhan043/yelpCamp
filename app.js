@@ -92,7 +92,8 @@ const path=require('path');
 const campground = require('./models/campground');
 app.use(methodOverride('_method'))
 app.use(express.urlencoded({extended:true}));
-app.engine('ejs',ejsMate);
+// app.engine('ejs',ejsMate);
+app.engine('ejs', require('ejs-mate'));
 app.set('view engine', 'ejs');
 app.set('views',path.join(__dirname,'views'))
 app.listen(3000,()=>{
